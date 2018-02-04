@@ -4,10 +4,25 @@
 	clear:both;
 }
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background-image: url("../images/dust_scratches.png");
   background-repeat: repeat;
   background-color: #ffffff;
+  position: relative;
+  margin:0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 h2, h3 {
@@ -16,7 +31,7 @@ h2, h3 {
   color: #4aaaa5;
 }
 
-h1, h2, h3 {
+h1, h2, h3{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
 }
@@ -24,6 +39,7 @@ h1, h2, h3 {
 header {
   border-bottom: solid;
   border-color: #cccccc;
+  border-width: thin;
   background-color: #ffffff;
   margin-bottom: 30px;
 }
@@ -62,6 +78,7 @@ li:last-child {
 
 a {
   text-decoration: none;
+  color: #777777;
 }
 
 a:visited {
@@ -77,40 +94,20 @@ a:visited {
   width: 960px;
   margin: 0 auto;
   height: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 16px;
   clear: both;
-}
-
-#bio {
-  width: 650px;
-  float: left;
-  background-color: #ffffff;
-  border-color: #dddddd;
-  border: solid;
-  margin-right: 20px;
-}
-
-h2 {
-  font-size: 28px;
-  padding: 15px 5px;
-  margin: 20px;
-}
-
-#bio p {
-  margin: 20px;
-}
-
-#bio img {
-  float: left;
-  margin-right: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  min-height: 100%;
 }
 
 #social {
   width: 270px;
   float: left;
   background-color: #ffffff;
-  border-color: #dddddd;
   border: solid;
+  border-color: #dddddd;
+  border-width: thin;
 }
 
 h3 {
@@ -124,18 +121,12 @@ h3 {
   float:left;
   display: block;
   margin: 0 auto;
-  width: 25%;
-  padding: 0px;
-}
-
-span {
-  text-align: center;
+  width: 33.3%;
 }
 
 #social p {
   margin: 15px;
-  
-  /*padding: 20px;*/
+  padding: 0 10px;
 }
 
 footer {
@@ -144,7 +135,88 @@ footer {
   border-top: #4aaaa5 solid 10px;
   padding: 25px;
   text-align: center;
-  margin-top: 30px;
-  height: 100%;
+  width: 100%;
   clear: both;
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 30px;
+  height: 16px;
+}
+
+#bio, #portfolio, #contact {
+  width: 650px;
+  float: left;
+  background-color: #ffffff;
+  border: solid;
+  border-color: #dddddd;
+  border-width: thin;
+  margin-right: 40px;
+}
+
+h2 {
+  font-size: 28px;
+  padding: 15px 5px;
+  margin: 20px;
+}
+
+#bio p, #list {
+  margin: 20px;
+}
+
+#bio img {
+  float: left;
+  margin-right: 15px;
+}
+
+form {
+  margin: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  border: solid;
+  border-color: #dddddd;
+  border-width: thin;
+}
+
+button {
+  color: #fff;
+  background-color: #4aaaa5;
+  border: none;
+  padding: 5px 20px;
+  font-size: 16px;
+}
+
+.items {
+  float: left;
+  width: 45%;
+  margin-right: 4%;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.items:nth-child(2n) {
+  margin-right: 0;
+  margin-left: 4%;
+}
+
+#list {
+  width: 604px;
+}
+
+h4 {
+  position: absolute;
+  bottom: 15px;
+  background-color: #4aaaa5;
+  color: #fff;
+  width: 280px;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
