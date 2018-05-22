@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
@@ -24,15 +25,15 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="index.html">About</a>
-          <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
-          <a class="nav-item nav-link" href="contact.html">Contact</a>
+          <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+          <a class="nav-item nav-link" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
   </header>
 
   <div class="container">
-    <div class="row pt-4">
+    <div id="home" class="row pt-4">
       <div class="col-lg-6">
         <div class="image-header text-center">
           <img src="assets/images/bio_image-resized.jpg" alt="Photo of Melissa Waltner" class="img-fluid rounded-circle" />
@@ -42,26 +43,133 @@
       <div class="col-lg-6 py-5">
         <div class="display-4">Hello,
           <br /> I'm Melissa,
-          <br /> Full Stack Web Developer</div>
+          <br /> A Full Stack 
+          <br />Web Developer</div>
       </div>
     </div>
 
-    <div class="row py-4">
+    <section id="portfolio">
+      <h1 class="display-4 mt-4">Portfolio</h1>
+      <hr/>
+
+    <!-- 1st row -->
+    <div class="row py-3">
       <div class="card-deck">
-      <div class="card"><img src="assets/images/Project_RoadTrip.png" alt="" class="card-img-top"></div>
-      <div class="card"><img src="assets/images/Friend_Finder.png" alt="" class="card-img-top"></div>
-      <div class="card"><img src="assets/images/Trivia_Game.png" alt="" class="card-img-top"></div>
+        <div class="card">
+          <img src="assets/images/Project_RoadTrip.png" alt="" class="card-img-top">
+          <div class="card-footer">
+            Project Road Trip!
+            <span class="float-right">
+              <a class="h4" href="http://suitemel.com/Project_RoadTrip/">
+                <i class="fas fa-link"></i>
+              </a>
+              <a class="h4" href="https://github.com/SuiteMel/Project_RoadTrip">
+                <i class="fab fa-github"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/images/Friend_Finder.png" alt="" class="card-img-top">
+          <div class="card-footer">
+            Friend Finder
+            <span class="float-right">
+              <a class="h4" href="https://tranquil-wave-43023.herokuapp.com">
+                <i class="fas fa-link"></i>
+              </a>
+              <a class="h4" href="https://github.com/SuiteMel/FriendFinder">
+                <i class="fab fa-github"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/images/Trivia_Game.png" alt="" class="card-img-top">
+          <div class="card-footer">
+            Minecraft Trivia Game
+            <span class="float-right">
+              <a class="h4" href="http://suitemel.com/TriviaGame/">
+                <i class="fas fa-link"></i>
+              </a>
+              <a class="h4" href="https://github.com/SuiteMel/TriviaGame">
+                <i class="fab fa-github"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-      <!-- <div class="card"><img src="" alt="" class="card-img-top"></div>
-      <div class="card"><img src="" alt="" class="card-img-top"></div>
-      <div class="card"><img src="" alt="" class="card-img-top"></div> -->
-    </div>
+
+    <!-- 2nd row -->
+    <div class="row py-3">
+        <div class="card-deck">
+          <div class="card">
+            <img src="assets/images/GifTastic.png" alt="" class="card-img-top">
+            <div class="card-footer">
+                GifTastic!
+              <span class="float-right">
+                <a class="h4" href="http://suitemel.com/GifTastic/">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a class="h4" href="https://github.com/SuiteMel/GifTastic">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="assets/images/Eat-Da-Burger.png" alt="" class="card-img-top">
+            <div class="card-footer">
+              Eat-Da-Burger!
+              <span class="float-right">
+                <a class="h4" href="https://stormy-garden-74550.herokuapp.com">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a class="h4" href="https://github.com/SuiteMel/Eat-Da-Burger">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="assets/images/monster_slayer.png" alt="" class="card-img-top">
+            <div class="card-footer">
+              Monster Slayer
+              <span class="float-right">
+                <a class="h4" href="https://monster-slayer-ku.herokuapp.com/">
+                  <i class="fas fa-link"></i>
+                </a>
+                <a class="h4" href="https://github.com/SuiteMel/Monster_Slayer">
+                  <i class="fab fa-github"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
   </div>
 
-  <footer class="text-light bg-dark p-2">
-    <p class="m-1">&copy; Copyright 2018 Melissa Waltner <span class="float-right"><a class="h4" href="https://github.com/SuiteMel"><i class="fab fa-github"></i></a> <a class="h4" href="https://www.linkedin.com/in/melissawaltner/"><i class="fab fa-linkedin"></i></a></span></p>
-    
-    
+  <footer id="contact" class="text-light bg-dark p-2">
+    <p class="m-1">&copy; Copyright 2018 Melissa Waltner
+      <span class="float-right">
+        <a class="h4" href="mailto:melissamwaltner@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="h4" href="https://github.com/SuiteMel">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="h4" href="https://www.linkedin.com/in/melissawaltner/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </span>
+    </p>
+
+
   </footer>
 
   <!-- Optional JavaScript -->
