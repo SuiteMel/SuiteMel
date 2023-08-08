@@ -3,10 +3,21 @@
 </svelte:head>
 
 <script>
-  const result = 76;
+  export let data;
+  const mean = data => {
+  if (data.length < 1) {
+    return;
+  }
+  return data.reduce((prev, current) => prev + current) / data.length;
+  };
+  const scores = data.results.map(value => value.score);
+  const result = Math.round( mean(scores) );
   const resultText = 'Great';
   const resultCopy = 'You scored higher than 65% of the people who have taken these tests.';
+  import Icon from '$lib/components/icon.svelte';
+  import symbols from '$lib/assets/frontend-mentor/results-summary-symbol-defs.svg?raw';
 </script>
+{@html symbols}
 
 <section class="results-summary grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
   <div class="container">
@@ -32,8 +43,20 @@
         </p>
       </div>
 
-      <div class="px-8 py-8">
+      <div class="px-8 py-8 w-1/2">
         <p class="font-bold text-xl">Summary</p>
+        {#each data.results as { category, score, icon }}
+          <div class="flex justify-between">
+            <p>
+              <Icon name="{icon}" class="mr-2" />
+              <span>{category}</span>
+            </p>
+
+            <p>
+              {score} / 100
+            </p>
+          </div>
+        {/each}
       </div>
     </div>
   </div>

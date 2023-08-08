@@ -6,7 +6,7 @@
   import nft from '$lib/assets/frontend-mentor/image-equilibrium.jpg';
   import avatar from '$lib/assets/frontend-mentor/image-avatar.png';
   import Icon from '$lib/components/icon.svelte';
-  import symbols from '$lib/assets/symbol-defs.svg?raw';
+  import symbols from '$lib/assets/frontend-mentor/nft-card-symbol-defs.svg?raw';
 </script>
 {@html symbols}
 
