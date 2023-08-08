@@ -1,7 +1,5 @@
 <svelte:head>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | NFT preview card component</title>
 </svelte:head>
 
 <script>
@@ -11,13 +9,6 @@
   import symbols from '$lib/assets/symbol-defs.svg?raw';
 </script>
 {@html symbols}
-
-<main class="flex flex-col">
-  <div class="container">
-    <h1 class="text-2xl font-semibold mb-10 mt-6 text-purple-700">
-      NFT preview card component
-    </h1>
-  </div>
 
   <section class="nft-card grid items-center grow py-20 bg-[color:var(--dark-blue)] font-['Outfit']">
     <div class="container">
@@ -59,22 +50,8 @@
       
     </div>
   </section>
-</main>
-
-<footer class="bg-violet-100 py-2">
-  <div class="container">
-    <div class="text-xs">
-      Challenge by <a class="text-violet-700 underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a class="text-violet-700 underline" href="https://github.com/SuiteMel" target="_blank">SuiteMel</a>.
-    </div>
-  </div>
-</footer>
 
 <style>
-main {
-  min-height: calc(100vh - 2rem);
-}
-
 .nft-card {
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
