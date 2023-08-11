@@ -28,7 +28,7 @@
 </script>
 
 <div class="px-8">
-  <h1 class="font-headings text-5xl text-center mt-10">Passionate about web development.</h1>
+  <h1 class="font-headings text-5xl text-center mt-10">Passionate about web development</h1>
 
   <section class="mt-10">
     <div class="lg:w-10/12 mx-auto">

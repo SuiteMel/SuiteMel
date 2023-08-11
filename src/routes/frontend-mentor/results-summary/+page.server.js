@@ -6,6 +6,7 @@ export function load() {
 			category: result.category,
       score: result.score,
       icon: result.icon,
+			color: result.color
 		}))
 	};
 }
