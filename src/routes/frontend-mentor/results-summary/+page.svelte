@@ -19,6 +19,7 @@
 </script>
 {@html symbols}
 
+<!-- TODO: Active states and mobile -->
 <section class="results-summary grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
   <div class="container">
     <div class="bg-white rounded-3xl flex w-8/12 xl:w-1/2 mx-auto">
