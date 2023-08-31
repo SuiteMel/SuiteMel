@@ -1,27 +1,36 @@
 <script>
+  // import { navigating } from '$app/stores';
   import { page } from '$app/stores';
   import favicon from '$lib/assets/frontend-mentor/favicon-32x32.png';
-  /** @type {import('./$types').PageData} */
-  export let data;
+  // export let data;
 
-  const url = $page.url.pathname;
-  const sections = data.sections;
-  const current = Object.keys(sections).find(( key ) => url.includes(key) );
+  // const url = $page.url.pathname;
+  // console.log( url );
+  // $: test = Object.keys(data.sections).find(( key ) => url.includes(key) );
+  // console.log( test );
+
+  // const sections = data.sections;
+  // const current = Object.keys(data.sections).find(( key ) => url.includes(key) );
+  // console.log( current );
+  // console.log( data.sections[current]);
+  // console.log(sections[current]);
 </script>
 
 <svelte:head>
   <link rel="icon" type="image/png" sizes="32x32" href="{favicon}">
-  <title>Frontend Mentor{sections[current] ? ' | '+sections[current].title : ''}</title>
+  <!-- <title>Frontend Mentor{sections[current] ? ' | '+sections[current] : ''}</title> -->
 </svelte:head>
 
 <main class="flex flex-col">
-  {#if sections[current] }
-    <div class="container">
-      <h1 class="text-2xl font-semibold mb-10 mt-6 text-purple-700">
-        {sections[current].title}
-      </h1>
-    </div>
-  {/if}
+  <!-- <section class="container">
+    <h1 class="text-2xl font-semibold mb-10 mt-6 text-purple-700">
+      {#if sections[current] }
+        {sections[current]}
+      {:else}
+        Frontend Mentor
+      {/if}
+    </h1>
+  </section> -->
 
   <slot />
 </main>
