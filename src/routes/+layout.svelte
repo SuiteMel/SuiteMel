@@ -5,6 +5,7 @@
 
   onMount(() => {
     Menu.closeMenu(); // Call a function to close the menu
+    console.log( 'mounted' );
   });
 </script>
 
