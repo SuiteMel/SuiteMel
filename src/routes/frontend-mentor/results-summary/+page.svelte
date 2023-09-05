@@ -20,9 +20,9 @@
 {@html symbols}
 
 <!-- TODO: Active states and mobile -->
-<section class="results-summary grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
+<section class="results-summary bg-white grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
   <div class="lg:container">
-    <div class="bg-white lg:rounded-3xl grid lg:grid-cols-2 lg:w-8/12 xl:w-1/2 mx-auto">
+    <div class="bg-white lg:rounded-3xl grid lg:grid-cols-2 lg:w-8/12 xl:w-1/2 mx-auto main-box">
       <div class="bg-gradient rounded-b-3xl lg:rounded-t-3xl px-14 text-center py-8">
         <p class="text-[color:var(--light-lavender)] font-bold text-xl">Your Result</p>
 
@@ -84,6 +84,10 @@
     --dark-gray-blue: hsl(224, 30%, 27%);
 
     --opacity: 10%;
+  }
+
+  .main-box {
+    box-shadow: 10px 10px 20px 1px hsla(224 30% 27% / 10%);
   }
 
   .bg-gradient {
