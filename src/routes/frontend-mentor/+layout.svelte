@@ -18,7 +18,7 @@
 <main class="flex flex-col">
   {#if sections[current] }
     <section class="container">
-      <h1 class="text-2xl font-semibold mb-10 mt-6 text-purple-700">
+      <h1 class="text-2xl font-semibold mb-10 mt-12 text-purple-700">
           {sections[current]}
         </h1>
     </section>
