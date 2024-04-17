@@ -6,7 +6,7 @@
   import image from '$lib/assets/frontend-mentor/image-stats.jpg';
 </script>
 
-<section class="subpixel-antialiased stats-preview grid items-center grow py-20 bg-[color:var(--dark-blue)] text-white font-['Inter']">
+<section class="subpixel-antialiased stats-preview grid items-center justify-center grow py-20 bg-[color:var(--dark-blue)] text-white font-['Inter']">
   <div class="container">
     <div class="grid overflow-hidden rounded-lg lg:grid-cols-2">
       <div class="text-center lg:text-left bg-[color:var(--navy)] pt-10 p-8 md:p-[4.5rem] lg:pr-24">
