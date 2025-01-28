@@ -8,7 +8,8 @@ export function load() {
       'stats-preview': 'Stats preview card component',
       'blog-preview-card': 'Blog preview card',
       'social-links-profile': 'Social links profile',
-      'recipe-page': 'Recipe page'
+      'recipe-page': 'Recipe page',
+      'product-preview-card': 'Product preview card'
     }
   };
 }
