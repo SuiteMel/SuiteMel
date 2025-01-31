@@ -56,7 +56,7 @@
         <div style="grid-area: {card.position};" class="">
           <div class="relative flex flex-col bg-white rounded-lg p-7 overflow-hidden card {card.color}">
             <div>
-              <h3 class="card__title">{card.title}</h3>
+              <h3 class="mb-1 card__title">{card.title}</h3>
               <p class="card__text">{card.text}</p>
             </div>
             
