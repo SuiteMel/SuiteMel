@@ -10,7 +10,8 @@ export function load() {
       'social-links-profile': 'Social links profile',
       'recipe-page': 'Recipe page',
       'product-preview-card': 'Product preview card',
-      'four-card-feature': 'Four card feature section'
+      'four-card-feature': 'Four card feature section',
+      'testimonials-grid': 'Testimonials grid section'
     }
   };
 }
