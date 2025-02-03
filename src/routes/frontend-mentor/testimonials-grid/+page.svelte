@@ -6,29 +6,21 @@
   const images = import.meta.glob(
 		'$lib/assets/frontend-mentor/testimonials-grid/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
 		{
-      import: 'default',
-			eager: true
+			eager: true,
 		}
 	);
 
-  function getFile(obj, name) {
-    const result = Object.entries(obj).find(([key, value]) => 
-      typeof value === "string" && value.includes(name)
-    );
-    return result[0];
-  }
-
   const testimonials = [
     {
-      image: getFile(images, 'daniel'),
+      image: 'daniel',
       name: 'Daniel Clifford',
       title: 'Verified Graduate',
       heading: 'I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.',
       content: 'I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup.',
-      classes: 'card--purple'
+      classes: ''
     },
     {
-      image: getFile(images, 'jonathan'),
+      image: 'jonathan',
       name: 'Jonathan Walters',
       title: 'Verified Graduate',
       heading: 'The team was very supportive and kept me motivated',
@@ -36,7 +28,7 @@
       classes: 'card--gray'
     },
     {
-      image: getFile(images, 'jeanette'),
+      image: 'jeanette',
       name: 'Jeanette Harmon',
       title: 'Verified Graduate',
       heading: 'An overall wonderful and rewarding experience',
@@ -44,7 +36,7 @@
       classes: ''
     },
     {
-      image: getFile(images, 'patrick'),
+      image: 'patrick',
       name: 'Patrick Abrams',
       title: 'Verified Graduate',
       heading: 'Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy.',
@@ -52,7 +44,7 @@
       classes: 'card--dark-gray'
     },
     {
-      image: getFile(images, 'kira'),
+      image: 'kira',
       name: 'Kira Whittle',
       title: 'Verified Graduate',
       heading: 'Such a life-changing experience. Highly recommended!',
@@ -61,13 +53,12 @@
     }
   ];
 </script>
-
 <section id="content" class="grid items-center py-20 testimonials-grid grow bg-[--light-gray] font-['Barlow_Semi_Condensed'] text-[0.8125rem] font-medium">
   <div class="grid px-6 mx-auto gap-y-6 gap-x-8 cards">
     {#each testimonials as card}
       <div class="px-8 pt-6 pb-8 bg-white rounded-lg card {card.classes}">
         <div class="flex gap-4 mb-4">
-          <img class="rounded-full h-7 w-7" src="{card.image}" alt="Picture of {card.name}">
+          <img src="{images['/src/lib/assets/frontend-mentor/testimonials-grid/image-'+card.image+'.jpg'].default}" alt="Picture of {card.name}" class="rounded-full h-7 w-7">
           <div class="leading-none">
             <p class="mb-1">{card.name}</p>
             <p class="text-[0.6875rem] opacity-50">{card.title}</p>
@@ -92,28 +83,51 @@
 
   .cards {
     max-width: 69.375rem;
+
+    & > :nth-child(1) {
+      background-color: var(--purple);
+      color: white;
+
+      img {
+        outline: 2px solid var(--light-purple);
+      }
+    }
+
+    & > :nth-child(2) {
+      background-color: var(--gray);
+      color: white;
+    }
+
+    & > :nth-child(4) {
+      background-color: var(--dark-gray);
+      color: white;
+
+      img {
+        outline: 2px solid var(--purple);
+      }
+    }
     
     @screen md {
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "a b" "c d" "e e";
       
-      :nth-child(1) {
+      & > :nth-child(1) {
         grid-area: a;
       }
   
-      :nth-child(2) {
+      & > :nth-child(2) {
         grid-area: b;
       }
   
-      :nth-child(3) {
+      & > :nth-child(3) {
         grid-area: c;
       }
   
-      :nth-child(4) {
+      & > :nth-child(4) {
         grid-area: d;
       }
   
-      :nth-child(5) {
+      & > :nth-child(5) {
         grid-area: e;
       }
     }
@@ -126,28 +140,5 @@
 
   .card {
     box-shadow: 40px 60px 50px -47px rgb(from var(--gray) r g b / 25%);
-  }
-  
-  .card--purple {
-    background-color: var(--purple);
-    color: white;
-
-    img {
-      outline: 2px solid var(--light-purple);
-    }
-  }
-
-  .card--gray {
-    background-color: var(--gray);
-    color: white;
-  }
-
-  .card--dark-gray {
-    background-color: var(--dark-gray);
-    color: white;
-
-    img {
-      outline: 2px solid var(--purple);
-    }
   }
 </style>
