@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  import Icon from '$lib/components/icon.svelte';
   const images = import.meta.glob(
 		'$lib/assets/frontend-mentor/testimonials-grid/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
 		{
@@ -53,10 +54,21 @@
     }
   ];
 </script>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <symbol id="icon-quotation" viewBox="0 0 33 32">
+  <path fill="#a775f1" style="fill: var(--color1, #a775f1)" d="M32.627 32v-13.262h-6.239c0-1.842 0.216-3.508 0.649-4.999s1.073-2.914 1.922-4.27c0.848-1.357 2.071-2.487 3.668-3.391v-6.078c-3.061 1.34-5.557 3.098-7.487 5.275s-3.361 4.563-4.292 7.159c-0.932 2.595-1.398 6.372-1.398 11.328v8.238h13.176zM13.176 32v-13.262h-6.239c0-1.842 0.216-3.508 0.649-4.999s1.073-2.914 1.922-4.27c0.848-1.357 2.071-2.487 3.668-3.391v-6.078c-3.028 1.34-5.515 3.098-7.462 5.275s-3.386 4.563-4.317 7.159c-0.932 2.595-1.398 6.372-1.398 11.328v8.238h13.176z"></path>
+  </symbol>
+  </defs>
+</svg>
+  
 <section id="content" class="grid items-center py-20 testimonials-grid grow bg-[--light-gray] font-['Barlow_Semi_Condensed'] text-[0.8125rem] font-medium">
   <div class="grid px-6 mx-auto gap-y-6 gap-x-8 cards">
-    {#each testimonials as card}
-      <div class="px-8 pt-6 pb-8 bg-white rounded-lg card {card.classes}">
+    {#each testimonials as card, i}
+    <div class="px-8 pt-6 pb-8 bg-white rounded-lg relative z-0 card {card.classes}">
+        {#if i === 0}
+        <Icon name="quotation" class="absolute right-0 top-0 md:mr-20 mr-6 w-[6.5rem] h-[6.5rem] -z-10" />
+        {/if}
         <div class="flex gap-4 mb-4">
           <img src="{images['/src/lib/assets/frontend-mentor/testimonials-grid/image-'+card.image+'.jpg'].default}" alt="Picture of {card.name}" class="rounded-full h-7 w-7">
           <div class="leading-none">
