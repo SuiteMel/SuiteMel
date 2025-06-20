@@ -11,7 +11,8 @@ export function load() {
       'recipe-page': 'Recipe page',
       'product-preview-card': 'Product preview card',
       'four-card-feature': 'Four card feature section',
-      'testimonials-grid': 'Testimonials grid section'
+      'testimonials-grid': 'Testimonials grid section',
+      'meet-landing-page': 'Meet Landing page'
     }
   };
 }

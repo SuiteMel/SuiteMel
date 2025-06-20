@@ -26,6 +26,9 @@ export default {
           'sans-serif'
         ]
       },
+      screens: {
+        '2xl': '1440px',
+      }
     },
   },
   plugins: [],
