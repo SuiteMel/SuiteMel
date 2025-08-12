@@ -3,7 +3,6 @@
 </svelte:head>
 
 <script>
-  export let data;
   const mean = data => {
   if (data.length < 1) {
     return;
@@ -16,17 +15,18 @@
   const resultCopy = 'You scored higher than 65% of the people who have taken these tests.';
   import Icon from '$lib/components/icon.svelte';
   import symbols from '$lib/assets/frontend-mentor/results-summary-symbol-defs.svg?raw';
+  let { data } = $props();
 </script>
 {@html symbols}
 
 <!-- TODO: Active states and mobile -->
 <section class="results-summary bg-white grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
   <div class="lg:container">
-    <div class="bg-white lg:rounded-3xl grid lg:grid-cols-2 lg:w-8/12 xl:w-1/2 mx-auto main-box">
-      <div class="bg-gradient rounded-b-3xl lg:rounded-t-3xl px-14 text-center py-8">
+    <div class="grid mx-auto bg-white lg:rounded-3xl lg:grid-cols-2 lg:w-8/12 xl:w-1/2 main-box">
+      <div class="py-8 text-center bg-gradient rounded-b-3xl lg:rounded-t-3xl px-14">
         <p class="text-[color:var(--light-lavender)] font-bold text-xl">Your Result</p>
 
-        <div class="rounded-full aspect-square mx-10 circle-gradient my-8 flex flex-col items-center justify-center font-bold">
+        <div class="flex flex-col items-center justify-center mx-10 my-8 font-bold rounded-full aspect-square circle-gradient">
           <p class="text-6xl text-white">
             {result}
           </p>
@@ -35,7 +35,7 @@
           </p>
         </div>
 
-        <p class="text-white text-2xl font-bold mb-5">
+        <p class="mb-5 text-2xl font-bold text-white">
           {resultText}
         </p>
 
@@ -45,13 +45,13 @@
       </div>
 
       <div class="px-8 py-8">
-        <p class="font-bold text-xl">Summary</p>
+        <p class="text-xl font-bold">Summary</p>
 
-        <div class="space-y-3 mt-7 mb-10">
+        <div class="mb-10 space-y-3 mt-7">
           {#each data.results as { category, score, icon, color }}
             <div class="font-bold flex justify-between bg-gray-400/50 rounded-lg px-4 py-3 {color}">
               <p>
-                <Icon name="{icon}" class="mr-2" />
+                <Icon name={icon} class="mr-2" />
                 <span>{category}</span>
               </p>
   

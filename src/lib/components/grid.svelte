@@ -1,6 +1,12 @@
 <script>
-  export let containerClasses = "";
-  export let hidden = false;
+  /**
+   * @typedef {Object} Props
+   * @property {string} [containerClasses]
+   * @property {boolean} [hidden]
+   */
+
+  /** @type {Props} */
+  let { containerClasses = "", hidden = false } = $props();
   console.log(hidden);
 </script>
 
@@ -8,13 +14,13 @@
 <div class="fixed inset-x-0 top-0 z-50 h-screen">
 	<div class="container grid xl:grid-cols-12 md:grid-cols-8 grid-cols-6 {containerClasses}">
     {#each {length: 6} as _, i}
-      <div class="h-screen bg-red-300/20" />
+      <div class="h-screen bg-red-300/20"></div>
     {/each}
     {#each {length: 2} as _, i}
-      <div class="hidden h-screen md:block bg-red-300/20" />
+      <div class="hidden h-screen md:block bg-red-300/20"></div>
     {/each}
     {#each {length: 4} as _, i}
-      <div class="hidden h-screen xl:block bg-red-300/20" />
+      <div class="hidden h-screen xl:block bg-red-300/20"></div>
     {/each}
   </div>
 </div>

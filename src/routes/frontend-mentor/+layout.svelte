@@ -2,10 +2,10 @@
   // import { navigating } from '$app/stores';
   import { page } from '$app/stores';
   import favicon from '$lib/assets/frontend-mentor/favicon-32x32.png';
-  export let data;
+  let { data, children } = $props();
 
-  $: url = $page.url.pathname;
-  $: current = Object.keys(data.sections).find(( key ) => url.includes(key) );
+  let url = $derived($page.url.pathname);
+  let current = $derived(Object.keys(data.sections).find(( key ) => url.includes(key) ));
 
   const sections = data.sections;
 </script>
@@ -16,7 +16,7 @@
 </svelte:head>
 
 <main class="flex flex-col">
-  {#if sections[current] }
+  {#if sections[current]}
     <section class="container">
       <h1 class="text-2xl font-semibold mb-10 mt-12 text-purple-700">
           {sections[current]}
@@ -24,7 +24,7 @@
     </section>
   {/if}
 
-  <slot />
+  {@render children?.()}
 </main>
 
 <footer class="bg-violet-100 py-2">

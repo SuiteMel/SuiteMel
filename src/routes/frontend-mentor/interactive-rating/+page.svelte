@@ -1,10 +1,10 @@
 <script>
   import { fade } from 'svelte/transition';
   import { enhance } from '$app/forms';
-  export let form;
 
   import star from '$lib/assets/frontend-mentor/icon-star.svg';
   import thankYou from '$lib/assets/frontend-mentor/illustration-thank-you.svg';
+  let { form } = $props();
 </script>
 
 <section class="bg-[color:var(--very-dark-blue)] grow text-white font-['Overpass'] flex flex-col px-6">

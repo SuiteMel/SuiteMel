@@ -1,8 +1,10 @@
 <script>
   import "../app.css";
-  import Menu from "../lib/components/menu.svelte"
+  import Menu from "$lib/components/menu.svelte";
+  
+  let { children } = $props();
 </script>
 
 <Menu />
 
-<slot />
+{@render children?.()}

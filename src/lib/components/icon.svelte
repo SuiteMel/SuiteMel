@@ -1,7 +1,7 @@
 <script>
-  export let name;
+  let { ...props } = $props();
 </script>
 
-<svg class="icon icon-{name} {$$props.class}" viewBox="0 0 32 32">
-  <use xlink:href={`#icon-${name}`} />
+<svg class="icon icon-{props.name} {props.class}" viewBox="0 0 32 32">
+  <use xlink:href={`#icon-${props.name}`} />
 </svg>
