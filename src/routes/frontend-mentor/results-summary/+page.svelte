@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  let { data } = $props();
   const mean = data => {
   if (data.length < 1) {
     return;
@@ -15,7 +16,6 @@
   const resultCopy = 'You scored higher than 65% of the people who have taken these tests.';
   import Icon from '$lib/components/icon.svelte';
   import symbols from '$lib/assets/frontend-mentor/results-summary-symbol-defs.svg?raw';
-  let { data } = $props();
 </script>
 {@html symbols}
 
