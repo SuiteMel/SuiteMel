@@ -43,46 +43,46 @@
   }
 </script>
 
-<section class="recipe-page grid items-center grow md:py-20 font-['Outfit'] bg-white md:bg-[--stone-light] text-[--stone-medium]">
+<section class="recipe-page grid items-center grow md:py-20 font-['Outfit'] bg-white md:bg-(--stone-light) text-(--stone-medium)">
   <div class="w-full px-8 pb-10 mx-auto bg-white md:p-10 rounded-3xl box">
     <div class="-mx-8 md:mx-0">
       <img class="md:rounded-xl" src="{recipe.photo.src}" alt="{recipe.photo.alt}">
     </div>
     
-    <h2 class="hdg-1 text-[--stone-dark] mt-10">{recipe.name}</h2>
+    <h2 class="hdg-1 text-(--stone-dark) mt-10">{recipe.name}</h2>
     <p class="mt-6">{recipe.description}</p>
 
-    <div class="bg-[--rose-light] p-6 my-8 rounded-xl">
-      <h3 class="mb-4 hdg-3 text-[--rose-dark]">Preparation time</h3>
-      <ul class="ml-2 pl-4 space-y-2 list-disc text-[--rose-dark]">
+    <div class="bg-(--rose-light) p-6 my-8 rounded-xl">
+      <h3 class="mb-4 hdg-3 text-(--rose-dark)">Preparation time</h3>
+      <ul class="ml-2 pl-4 space-y-2 list-disc text-(--rose-dark)">
         {#each Object.entries(recipe.time) as [type, value]}
-          <li class="pl-4"><p class="text-[--stone-medium]"><span class="font-bold">{type}</span>: {value}</p></li>
+          <li class="pl-4"><p class="text-(--stone-medium)"><span class="font-bold">{type}</span>: {value}</p></li>
         {/each}
       </ul>
     </div>
 
-    <h3 class="hdg-2 text-[--brown] mb-6">Ingredients</h3>
-    <ul class="ml-2 pl-4 space-y-2 list-disc text-[--brown] border-b border-[--stone] mb-8 pb-8">
+    <h3 class="hdg-2 text-(--brown) mb-6">Ingredients</h3>
+    <ul class="ml-2 pl-4 space-y-2 list-disc text-(--brown) border-b border-(--stone) mb-8 pb-8">
       {#each Object.entries(recipe.ingredients) as [key, ingredient]}
-        <li class="pl-4"><p class="text-[--stone-medium]">{ingredient}</p></li>
+        <li class="pl-4"><p class="text-(--stone-medium)">{ingredient}</p></li>
       {/each}
     </ul>
 
-    <h3 class="hdg-2 text-[--brown] mb-6">Instructions</h3>
-    <ol class="ml-2 pl-4 list-decimal space-y-2 text-[--brown] font-bold border-b border-[--stone] mb-8 pb-8">
+    <h3 class="hdg-2 text-(--brown) mb-6">Instructions</h3>
+    <ol class="ml-2 pl-4 list-decimal space-y-2 text-(--brown) font-bold border-b border-(--stone) mb-8 pb-8">
       {#each Object.entries(recipe.instructions) as [intro, instruction]}
-        <li class="pl-4"><p class="text-[--stone-medium]">{intro}<span class="font-normal">: {instruction}</span></p></li>
+        <li class="pl-4"><p class="text-(--stone-medium)">{intro}<span class="font-normal">: {instruction}</span></p></li>
       {/each}
     </ol>
 
-    <h3 class="hdg-2 text-[--brown] mb-6">Nutrition</h3>
+    <h3 class="hdg-2 text-(--brown) mb-6">Nutrition</h3>
     <p class="my-6">{recipe.nutrition.disclaimer}</p>
-    <ul class="divide-y divide-[--stone] -mb-3">
+    <ul class="divide-y divide-(--stone) -mb-3">
       {#each Object.entries(recipe.nutrition.values) as [type, value]}
         <li class="px-8">
           <p class="grid grid-cols-2 my-3 gap-x-4">
             <span class="">{type}</span>
-            <span class="font-bold text-[--brown]">{value}</span>
+            <span class="font-bold text-(--brown)">{value}</span>
           </p>
         </li>
       {/each}
@@ -91,6 +91,8 @@
 </section>
 
 <style>
+  @reference "tailwindcss";
+
   .recipe-page {
     --rose-dark: #7A284E;
     --rose-light: #FFF7FB;
@@ -106,7 +108,7 @@
     line-height: 1;
     font-family: 'Young Serif';
     
-    @screen md {
+    @variant md {
       font-size: 2.5rem;
     }
   }

@@ -20,17 +20,17 @@
 {@html symbols}
 
 <!-- TODO: Active states and mobile -->
-<section class="results-summary bg-white grid items-center text-lg font-['Hanken_Grotesk'] grow bg-[color:var(--pale-blue)] font-medium">
+<section class="results-summary bg-white grid items-center text-lg font-['Hanken_Grotesk'] grow bg-(--pale-blue) font-medium">
   <div class="lg:container">
     <div class="grid mx-auto bg-white lg:rounded-3xl lg:grid-cols-2 lg:w-8/12 xl:w-1/2 main-box">
       <div class="py-8 text-center bg-gradient rounded-b-3xl lg:rounded-t-3xl px-14">
-        <p class="text-[color:var(--light-lavender)] font-bold text-xl">Your Result</p>
+        <p class="text-(--light-lavender) font-bold text-xl">Your Result</p>
 
         <div class="flex flex-col items-center justify-center mx-10 my-8 font-bold rounded-full aspect-square circle-gradient">
           <p class="text-6xl text-white">
             {result}
           </p>
-          <p class="text-[color:var(--light-lavender)] opacity-60">
+          <p class="text-(--light-lavender) opacity-60">
             of 100
           </p>
         </div>
@@ -39,7 +39,7 @@
           {resultText}
         </p>
 
-        <p class="text-[color:var(--light-lavender)]">
+        <p class="text-(--light-lavender)">
           {resultCopy}
         </p>
       </div>
@@ -55,14 +55,14 @@
                 <span>{category}</span>
               </p>
   
-              <p class="text-[color:var(--dark-gray-blue)]">
+              <p class="text-(--dark-gray-blue)">
                 {score} <span class="opacity-60">/ 100</span>
               </p>
             </div>
           {/each}
         </div>
 
-        <a href="/" class="bg-[color:var(--dark-gray-blue)] text-white w-full inline-block text-center rounded-3xl py-3 px-4">
+        <a href="/" class="bg-(--dark-gray-blue) text-white w-full inline-block text-center rounded-3xl py-3 px-4">
           Continue
         </a>
       </div>

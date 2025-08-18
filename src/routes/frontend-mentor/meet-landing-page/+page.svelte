@@ -23,7 +23,7 @@
     import logo from '$lib/assets/frontend-mentor/meet-landing-page/logo.svg';
 </script>
 
-<div id="content" class="grid items-center meet-landing-page grow bg-[--white] font-['Red_Hat_Display'] text-style-4 text-center">
+<div id="content" class="grid items-center meet-landing-page grow bg-(--white) font-['Red_Hat_Display'] text-style-4 text-center">
   <!-- Grid overlay to compare layout to design, hidden in production -->
   <Grid hidden="1" containerClasses="xl:px-40 md:px-11 xl:gap-8 md:gap-6 gap-4"/>
 
@@ -39,10 +39,10 @@
     <div class="container xl:flex xl:justify-center xl:gap-8 xl:px-40 md:px-11">
       <div class="self-start hidden pr-24 xl:block"><img src="{heroLeft}" alt="" class="max-w-none"></div>
       
-      <div class="mt-12 space-y-6 md:mt-[4.5rem] xl:space-y-8 md:max-w-md self-center shrink-0 xl:my-6">
-        <h1 class="text-style-1 text-[--slate-900]">Group Chat for Everyone</h1>
+      <div class="self-center mt-12 space-y-6 md:mt-18 xl:space-y-8 md:max-w-md shrink-0 xl:my-6">
+        <h1 class="text-style-1 text-(--slate-900)">Group Chat for Everyone</h1>
         
-        <p class="text-[--slate-600]">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+        <p class="text-(--slate-600)">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
         
         <div class="flex flex-col items-center justify-center gap-4 md:flex-row">
           <button class="button blue">Download <span>v1.3</span></button>
@@ -64,11 +64,11 @@
       </div>
       <div class="-mx-4">
         <div class="px-4 mx-auto space-y-8 xl:w-1/2 md:w-3/4">
-          <h2 class="text-style-3 text-[--cyan-600]">Built for modern use</h2>
+          <h2 class="text-style-3 text-(--cyan-600)">Built for modern use</h2>
           
-          <h3 class="text-style-2 text-[--slate-900]">Smarter meetings, all in one place</h3>
+          <h3 class="text-style-2 text-(--slate-900)">Smarter meetings, all in one place</h3>
           
-          <p class="text-[--slate-600]">
+          <p class="text-(--slate-600)">
             Send messages, share files, show your screen, and record your meetings — all in one 
             workspace. Control who can join with invite-only team access, data encryption, and data export.
           </p>
@@ -78,8 +78,8 @@
   </section>
   
   <span class="z-20 mx-auto text-style-5 number -mb-7">02</span>
-  <section class="py-16 text-[--white] relative z-0">
-    <div class="absolute inset-0 bg-[--cyan-600-90]">
+  <section class="py-16 text-(--white) relative z-0">
+    <div class="absolute inset-0 bg-(--cyan-600-90)">
       <picture class="">
         <source media="(min-width: 1280px)" srcset="{imgDesktop}" />
         <source media="(min-width: 769px)" srcset="{imgTablet}" />
@@ -99,6 +99,8 @@
 </div>
 
 <style>
+  @reference "tailwindcss";
+  
   .meet-landing-page {
     --cyan-600: #4D96A9;
     --cyan-600-90: rgba(77, 150, 169, 0.9);
@@ -122,11 +124,11 @@
   .text-style-1 {
     font-size: 2.5rem;
 
-    @screen md {
+    @variant md {
       font-size: 3rem;
     }
 
-    @screen xl {
+    @variant xl {
       font-size: 4rem;
     }
     
@@ -137,11 +139,11 @@
   .text-style-2 {
     font-size: 2rem;
 
-    @screen md {
+    @variant md {
       font-size: 2.25rem;
     }
 
-    @screen xl {
+    @variant xl {
       font-size: 2.5rem;
     }
     
@@ -152,11 +154,11 @@
   .text-style-3 {
     font-size: 0.75rem;
 
-    @screen md {
+    @variant md {
       font-size: 0.875rem;
     }
 
-    @screen xl {
+    @variant xl {
       font-size: 1rem;
     }
 
@@ -177,17 +179,17 @@
       content: "";
       display: block;
       width: 1px;
-      height: theme('space.20');
+      height: --spacing(20);
       background-color: var(--slate-300);
       position: absolute;
       bottom: 100%;
     }
 
-    margin-top: theme('space.20');
+    margin-top: --spacing(20);
     display: flex;
     position: relative;
-    height: theme('space.14');
-    width: theme('space.14');
+    height: --spacing(14);
+    width: --spacing(14);
     border: solid 1px var(--slate-300);
     justify-content: center;
     align-items: center;

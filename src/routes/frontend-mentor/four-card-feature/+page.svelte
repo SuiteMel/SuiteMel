@@ -15,35 +15,35 @@
       title: 'Supervisor',
       text: 'Monitors activity to identify project roadblocks',
       icon: 'supervisor',
-      color: 'before:bg-[--teal]',
+      color: 'before:bg-(--teal)',
       position: 'a'
     },
     {
       title: 'Team Builder',
       text: 'Scans our talent network to create the optimal team for your project',
       icon: 'team-builder',
-      color: 'before:bg-[--red]',
+      color: 'before:bg-(--red)',
       position: 'b'
     },
     {
       title: 'Karma',
       text: 'Regularly evaluates our talent to ensure quality',
       icon: 'karma',
-      color: 'before:bg-[--yellow]',
+      color: 'before:bg-(--yellow)',
       position: 'c'
     },
     {
       title: 'Calculator',
       text: 'Uses data from past projects to provide better delivery estimates',
       icon: 'calculator',
-      color: 'before:bg-[--blue]',
+      color: 'before:bg-(--blue)',
       position: 'd'
     }
   ]
 </script>
 {@html symbols}
 
-<section id="content" class="py-20 four-card-feature grow bg-[--white] text-[--gray] font-[Poppins]">
+<section id="content" class="py-20 four-card-feature grow bg-(--white) text-(--gray) font-[Poppins]">
   <div class="px-8">
     <div class="mb-16 text-center">
       <h2 class="font-light heading">{text}</h2>
@@ -69,6 +69,8 @@
 </section>
 
 <style>
+  @reference "tailwindcss";
+
   .four-card-feature {
     --white: #FAFAFA;
     --red: #EA5454;
@@ -83,7 +85,7 @@
     letter-spacing: 0.16px;
     line-height: 1.5;
 
-    @screen md {
+    @variant md {
       font-size: 2.25rem;
     }
   }
@@ -100,7 +102,7 @@
     max-width: 69.375rem;
     grid-template-areas: "a" "b" "c" "d";
     
-    @screen lg {
+    @variant lg {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas: 

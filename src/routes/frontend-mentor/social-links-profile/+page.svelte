@@ -24,14 +24,14 @@
   ]
 </script>
 
-<section class="social-links-profile grow py-20 px-6 grid items-center bg-[--black] text-white font-['Inter']">
+<section class="social-links-profile grow py-20 px-6 grid items-center bg-(--black) text-white font-['Inter']">
   <div class="w-full p-6 mx-auto text-center sm:p-10 box rounded-xl">
-    <div class="picture rounded-full mx-auto mb-6 bg-[--gray] overflow-hidden">
+    <div class="picture rounded-full mx-auto mb-6 bg-(--gray) overflow-hidden">
       <img src="/icon-big.png" alt="" class="object-cover object-center w-full h-full">
     </div>
 
     <h2 class="text-2xl">{name}</h2>
-    <p class="text-[--green] text-sm font-bold mt-1">{location}</p>
+    <p class="text-(--green) text-sm font-bold mt-1">{location}</p>
     <p class="my-6">{tagline}</p>
 
     {#each socials as social}

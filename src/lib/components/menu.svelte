@@ -1,5 +1,4 @@
 <script>
-  import { page, navigating } from '$app/state';
   let isOpen = $state(false);
 
   const toggleMenu = () => {
@@ -30,13 +29,16 @@
   }
 </script>
 
-<nav class="absolute min-w-fit w-1/6 -translate-x-full transition duration-300" class:isOpen use:clickOutside onclick_outside={closeMenu}>
-  <button onclick={toggleMenu} class="absolute top-0 left-full border-brand-primary rounded-br border-r-2 border-b-2 p-1 bg-white -ml-0.5 h-10 w-10">
+<nav class="absolute w-1/6 transition duration-300 -translate-x-full min-w-fit"
+  class:isOpen
+  use:clickOutside
+  onclick_outside={closeMenu}>
+  <button onclick={toggleMenu} class="absolute top-0 left-full border-brand-primary rounded-br border-r-2 border-b-2 p-1 bg-white -ml-0.5 h-10 w-10 cursor-pointer">
     <img class="" aria-hidden="true" src="/icon-big.png" alt="SuiteMel menu icon">
     <span class="sr-only">Menu</span>
   </button>
   
-  <div class="bg-white py-8 px-6 rounded-br border-brand-primary border-r-2 border-b-2">
+  <div class="px-6 py-8 bg-white border-b-2 border-r-2 rounded-br border-brand-primary">
     <ul class="space-y-3">
       <li>
         <a class="link-item" onclick={toggleMenu} href="/">Home</a>
@@ -54,18 +56,18 @@
     text-decoration: underline;
     text-underline-offset: 0.25rem;
     text-decoration-thickness: 2px;
-    text-decoration-color: theme('colors.brand.secondary');
+    text-decoration-color: var(--color-brand-secondary);
     font-weight: 500;
     &:hover {
       text-decoration-color: transparent;
     }
 
     &:focus {
-      outline: theme('colors.brand.secondary') solid 1px ;
+      outline: var(--color-brand-secondary) solid 1px;
     }
   }
 
   .isOpen {
-    transform: translateX(0);
+    translate: 0;
   }
 </style>

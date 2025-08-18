@@ -62,12 +62,12 @@
   </defs>
 </svg>
   
-<section id="content" class="grid items-center py-20 testimonials-grid grow bg-[--light-gray] font-['Barlow_Semi_Condensed'] text-[0.8125rem] font-medium">
+<section id="content" class="grid items-center py-20 testimonials-grid grow bg-(--light-gray) font-['Barlow_Semi_Condensed'] text-[0.8125rem] font-medium">
   <div class="grid px-6 mx-auto gap-y-6 gap-x-8 cards">
     {#each testimonials as card, i}
     <div class="px-8 pt-6 pb-8 bg-white rounded-lg relative z-0 card {card.classes}">
         {#if i === 0}
-        <Icon name="quotation" class="absolute right-0 top-0 md:mr-20 mr-6 w-[6.5rem] h-[6.5rem] -z-10" />
+        <Icon name="quotation" class="absolute top-0 right-0 mr-6 md:mr-20 w-26 h-26 -z-10" />
         {/if}
         <div class="flex gap-4 mb-4">
           <img src="{images['/src/lib/assets/frontend-mentor/testimonials-grid/image-'+card.image+'.jpg'].default}" alt="Picture of {card.name}" class="rounded-full h-7 w-7">
@@ -85,6 +85,8 @@
 </section>
 
 <style>
+  @reference "tailwindcss";
+
   .testimonials-grid {
     --light-gray: #ECF2F8;
     --gray: #48556A;
@@ -119,7 +121,7 @@
       }
     }
     
-    @screen md {
+    @variant md {
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "a b" "c d" "e e";
       
@@ -144,7 +146,7 @@
       }
     }
 
-    @screen lg {
+    @variant lg {
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "a a b e" "c d d e";
     }

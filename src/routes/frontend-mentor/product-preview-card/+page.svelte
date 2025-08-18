@@ -15,7 +15,7 @@
   </defs>
 </svg>
 
-<section class="product-preview-card grid items-center px-4 py-7 md:py-20 grow font-[Montserrat] font-medium text-[--gray] bg-[--cream]">
+<section class="product-preview-card grid items-center px-4 py-7 md:py-20 grow font-[Montserrat] font-medium text-(--gray) bg-(--cream)">
   <div class="w-full mx-auto box rounded-[0.625rem] overflow-hidden md:grid md:grid-cols-2">
     <picture>
       <source media="(max-width: 768px)" srcset="{imgMobile}" />
@@ -26,7 +26,7 @@
     <div class="p-6 bg-white md:p-8">
       <p class="text-xs leading-tight uppercase tracking-[5px] mb-3 md:mb-5">Perfume</p>
     
-      <h2 class="font-[Fraunces] font-bold text-[--black] leading-none text-[2rem] mb-4 md:mb-6">Gabrielle Essence Eau De Parfum</h2>
+      <h2 class="font-[Fraunces] font-bold text-(--black) leading-none text-[2rem] mb-4 md:mb-6">Gabrielle Essence Eau De Parfum</h2>
     
       <p class="mb-6 text-sm leading-relaxed">
         A floral, solar and voluptuous interpretation composed by Olivier Polge, 
@@ -34,11 +34,11 @@
       </p>
     
       <div class="flex items-center gap-4 mb-5 md:my-7">
-        <p class="font-[Fraunces] font-bold text-[--light-green] text-[2rem] leading-none">$149.99</p>
+        <p class="font-[Fraunces] font-bold text-(--light-green) text-[2rem] leading-none">$149.99</p>
         <p class="text-sm line-through">$169.99</p>
       </div>
     
-      <a class="text-sm font-bold text-white bg-[--light-green] py-4 block rounded-lg text-center hover:bg-[--green] duration-200" href="#add">
+      <a class="text-sm font-bold text-white bg-(--light-green) py-4 block rounded-lg text-center hover:bg-(--green) duration-200" href="#add">
         <Icon name="cart" class="w-4 h-4 mr-3" />
         Add to Cart
       </a>
