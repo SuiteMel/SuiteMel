@@ -20,7 +20,7 @@
 {@html symbols}
 
 <!-- TODO: Active states and mobile -->
-<section class="results-summary bg-white grid items-center text-lg font-['Hanken_Grotesk'] grow bg-(--pale-blue) font-medium">
+<section class="results-summary grid items-center text-lg font-['Hanken_Grotesk'] grow bg-(--pale-blue) font-medium">
   <div class="lg:container">
     <div class="grid mx-auto bg-white lg:rounded-3xl lg:grid-cols-2 lg:w-8/12 xl:w-1/2 main-box">
       <div class="py-8 text-center bg-gradient rounded-b-3xl lg:rounded-t-3xl px-14">
